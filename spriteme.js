@@ -543,6 +543,9 @@ SpriteMe.requestSprite = function(iSprite) {
 		sPrevJson = sJson;
 	}
 
+	// 6a68 TODO: looks like this is where the request is issued to the server.
+	// We can replace this bit with the canvas spriting thing.
+	// 
 	if ( sJson ) {
 		coolRunnings = undefined;
 		SpriteMe.closeImage();
@@ -604,6 +607,8 @@ SpriteMe.abortSprite = function() {
 };
 
 
+// 6a68 TODO: this is where the sprite server response is handled.
+// Let's fix this up, too.
 SpriteMe.handleSprite = function(spriteObj) {
 	if ( SpriteMe.bAbortSprite ) {
 		SpriteMe.bAbortSprite = false;
